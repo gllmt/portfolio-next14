@@ -1,15 +1,31 @@
+import { ComponentPropsWithoutRef } from "react"
 import { Section } from "./Section"
+import { cn } from "@/lib/utils"
+import { ReactIcon } from "./icons/ReactIcon"
+import { NextIcon } from "./icons/NextIcon"
+import Link from "next/link"
 
+
+const Code = ({className, ...props}: ComponentPropsWithoutRef<"span">) => {
+  return (
+    <span className={cn("bg-accent/30 hover:bg-accent/50 border border-accent rounded-sm text-primary font-mono px-1 py-0.5",className)} {...props} />
+  )
+}
 export const Hero = () => {
   return (
-    <Section className="flex max-lg:flex-col items-start">
-      <div className="flex-[2]">
-        <h2>Pierre Guillemot</h2>
-        <h3>Frontend Developper</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officiis, itaque doloremque quos voluptatibus impedit est ipsa et aliquid. Deleniti reprehenderit est nostrum delectus animi magni officia! Obcaecati, doloremque aliquid!</p>
+    <Section className="flex max-md:flex-col items-start gap-4">
+      <div className="flex-[2] flex flex-col gap-2">
+        <h2 className="font-semi-bold text-4xl text-primary">Pierre Guillemot</h2>
+        <h3 className="text-2xl">Frontend Developper</h3>
+        <p className="text-base">Creating code with <Link href="https://github.com/gllmt">
+          <Code className="inline-flex items-center gap-2"><ReactIcon size={16} className="inline" /> React.js </Code></Link> 
+        {/* and <Code><NextIcon size={16} className="inline" /> Next.js</Code>. */}
+        </p>
       </div>
-      <div className="flex-1">
-        <img src="https://avatars.githubusercontent.com/u/29959267?v=4" alt="Pierre Picture" className="w-full h-auto" />
+      <div className="flex-1 max-md:m-auto">
+        <div className="inline-block rounded-full overflow-hidden">
+          <img src="https://avatars.githubusercontent.com/u/29959267?v=4" alt="Pierre Picture" className="w-full h-auto max-w-xs" />
+        </div>
       </div>
     </Section>
   )
