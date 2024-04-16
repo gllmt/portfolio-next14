@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ComponentPropsWithoutRef } from "react"
 import { Section } from "./Section"
 import { cn } from "@/lib/utils"
@@ -14,7 +15,7 @@ const Code = ({className, ...props}: ComponentPropsWithoutRef<"span">) => {
 export const Hero = () => {
   return (
     <Section className="flex max-md:flex-col items-start gap-4">
-      <div className="flex-[2] flex flex-col gap-2">
+      <div className="flex-[3] w-full flex flex-col gap-2">
         <h2 className="font-semi-bold text-4xl text-primary">Pierre Guillemot</h2>
         <h3 className="text-2xl">Frontend Developper</h3>
         <p className="text-base">Creating code with <Link href="https://github.com/gllmt">
@@ -22,7 +23,7 @@ export const Hero = () => {
         {/* and <Code><NextIcon size={16} className="inline" /> Next.js</Code>. */}
         </p>
       </div>
-      <div className="flex-1 max-md:m-auto">
+      <div className="flex-[2] max-md:m-auto ml-auto">
         <div className="inline-block rounded-full overflow-hidden">
           <img src="https://avatars.githubusercontent.com/u/29959267?v=4" alt="Pierre Picture" className="w-full h-auto max-w-xs" />
         </div>
