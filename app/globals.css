@@ -1,6 +1,6 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
   @layer base {
     :root {
@@ -35,3 +35,9 @@
       @apply bg-background text-foreground;
     }
   }
+
+/* custom styles */
+::selection {
+  background-color: #c6ccd7;
+  color: #21252b;
+}
