@@ -5,13 +5,8 @@ import { cn } from "@/lib/utils"
 import { ReactIcon } from "./icons/ReactIcon"
 import { NextIcon } from "./icons/NextIcon"
 import Link from "next/link"
+import { Code } from "./Code"
 
-
-const Code = ({className, ...props}: ComponentPropsWithoutRef<"span">) => {
-  return (
-    <span className={cn("bg-accent/30 hover:bg-accent/50 border border-accent rounded-sm text-primary font-mono px-1 py-0.5",className)} {...props} />
-  )
-}
 export const Hero = () => {
   return (
     <Section className="flex max-md:flex-col items-start gap-4">
