@@ -1,9 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { ComponentPropsWithoutRef } from "react"
 import { Section } from "./Section"
-import { cn } from "@/lib/utils"
 import { ReactIcon } from "./icons/ReactIcon"
-import { NextIcon } from "./icons/NextIcon"
 import Link from "next/link"
 import { Code } from "./Code"
 
@@ -14,8 +11,7 @@ export const Hero = () => {
         <h2 className="font-semi-bold text-4xl text-primary">Pierre Guillemot</h2>
         <h3 className="text-2xl">Frontend Developper</h3>
         <p className="text-base">Creating code with <Link href="https://github.com/gllmt">
-          <Code className="inline-flex items-center gap-2"><ReactIcon size={16} className="inline" /> React.js </Code></Link> 
-        {/* and <Code><NextIcon size={16} className="inline" /> Next.js</Code>. */}
+          <Code className="inline-flex items-center gap-2"><ReactIcon size={16} className="inline" /> React.js </Code></Link>
         </p>
       </div>
       <div className="flex-[2] max-md:m-auto ml-auto">
